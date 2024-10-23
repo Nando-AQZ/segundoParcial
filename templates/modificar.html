@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <title>Modificar</title>
+</head>
+<body>
+    <p>Modifica los datos del producto:</p>
+    <form action="{{ url_for('modificar', item_index=item_index) }}" method="POST">
+        <table>
+           
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="nombre" value="{{ item.nombre }}" required></td>
+            </tr>
+            <tr>
+                <td>Cantidad:</td>
+                <td><input type="text" name="cantidad" value="{{ item.cantidad }}" required></td>
+            </tr>
+            <tr>
+                <td>Precio:</td>
+                    <td><input type="number" name="precio" step="0.01" value="{{ item.precio }}" required></td>
+            </tr>
+            <tr>
+                <td>Fecha de vencimiento:</td>
+                    <td><input type="date" name="fecha" value="{{ item.fecha }}" required></td>
+            </tr>
+            <tr>
+                <td>Categoria</td>
+                    <td><input type="text" name="categoria" value="{{ item.categoria }}" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Guardar cambios">
+                <a href="{{url_for('index')}}">volver</a>
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

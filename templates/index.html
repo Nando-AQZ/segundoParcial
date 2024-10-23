@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Gestion de productos</title>
+</head>
+<body>
+
+    <div class="datos">
+        <h1>SEGUNDO PARCIAL TEM-742</h1>
+        <P>Nombre: FERNANDO AQUIZE MAMANI</P>
+        <P>Carnet: 7055625</P>
+    </div>
+    <h1>Gestion de productos</h1>
+    
+    <br>
+    <a href="{{url_for('add_producto')}}">registrar</a>
+    <h3>Contenido de la Lista</h3>
+    {% if lista %}
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Fecha de Vencimiento</th>
+            <th>Categoría</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for item in lista %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.cantidad }}</td>
+            <td>{{ item.precio}}</td>
+            <td>{{ item.fecha}}</td>
+            <td>{{ item.categoria}}</td>
+            <td>
+                <form action="{{ url_for('eliminar', item_index=loop.index0) }}" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+                
+            </td>
+            <td><form action="{{ url_for('modificar', item_index=loop.index0) }}" method="GET" >
+                <button type="submit">Modificar</button>
+            </form></td>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    {% else %}
+    <p>La lista esta vacia</p>
+    {% endif %}
+</body>
+</html>

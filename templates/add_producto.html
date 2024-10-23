@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <title>Registro</title>
+</head>
+<body class="container">
+    <h1>Registro de producto</h1>
+    <form action="{{url_for('procesa')}}" method="POST">
+        <div class="columna_izquierda">
+            <table>
+                
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td>Cantidad:</td>
+                    <td><input type="number" name="cantidad" required></td>
+                </tr>
+                <tr>
+            
+                    <td>Precio:</td>
+                    <td><input type="number" name="precio" step="0.01" required></td>
+                </tr>
+                <tr>
+            
+                    <td>Fecha de vencimiento:</td>
+                    <td><input type="date" name="fecha"  required></td>
+                </tr>
+                <tr>
+                    <td>Categoria</td>
+                    <td><input type="text" name="categoria" required></td>
+                </tr>
+            </table>
+        </div>
+
+
+         <div class="boton">
+            <input type="submit" value="Registrar">
+            <a href="{{url_for('index')}}">volver</a>
+            
+        </div>
+    </form>
+   
+</body>
+</html>

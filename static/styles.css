@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente más moderna */
+    margin: 20px; /* Espaciado alrededor del contenido */
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color de texto */
+    align-items: center;
+}
+
+.datos
+{
+    border: 2px solid black; /* Grosor, estilo y color del borde */
+            padding: 10px; /* Espacio interno del div */
+            margin: 20px;
+            
+}
+
+h1 {
+    text-align: center; /* Centrar el título */
+    color: #2c3e50; /* Color del título */
+}
+
+h3 {
+    color: #34495e; /* Color del subtítulo */
+}
+
+/* Estilo del enlace de registro */
+a {
+    text-decoration: none; /* Sin subrayado */
+    color: #d3e6f3; /* Color azul */
+    font-weight: bold; /* Negrita */
+    background: #023c58;
+    border: 2px solid black; /* Grosor, estilo y color del borde */
+            padding: 10px; /* Espacio interno del div */
+            margin: 20px;
+            border-radius: 10px;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Eliminar bordes duplicados */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+th, td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    border: 1px solid #ddd; /* Bordes ligeros */
+}
+
+th {
+    background-color: #3498db; /* Color de fondo para el encabezado */
+    color: white; /* Color de texto del encabezado */
+}
+
+/* Estilo de filas alternas */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo alterno */
+}
+
+/* Estilo de botones */
+button {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 8px 12px; /* Espaciado interno */
+    cursor: pointer; /* Cursor pointer para botones */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+}
+
+/* Mensaje si la lista está vacía */
+p {
+    text-align: center; /* Centrar el mensaje */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #2c3e50; /* Color rojo */
+}
